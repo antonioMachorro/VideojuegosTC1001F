@@ -39,7 +39,21 @@ def move():
     for body in snake:
         square(body.x, body.y, 9, 'black')
 
-    square(food.x, food.y, 9, 'green')
+    direccion = randrange(1,5)
+    if(direccion == 1 and food.x+10 < 190):
+        food.x = food.x + 10
+        square(food.x, food.y, 9, 'green')
+    elif(direccion == 2 and food.x-10 > -200):
+        food.x = food.x - 10
+        square(food.x, food.y, 9, 'green')
+    elif(direccion == 3 and food.y+10 < 190):
+        food.y = food.y + 10
+        square(food.x, food.y, 9, 'green')
+    elif(direccion == 4 and food.y-10 > -200):
+        food.y = food.y - 10
+        square(food.x, food.y, 9, 'green')
+    else:
+        square(food.x, food.y, 9, 'green')
     update()
     ontimer(move, 100)
 
