@@ -26,12 +26,12 @@ def circle(start, end):
     "Draw circle from start to end."
     up()
     goto(start.x, start.y)
+    down()
     begin_fill()
 
     goto(end.x, end.y)
     left(90)
-
-    down()
+    
     for count in range(360):
         forward(0.017*sqrt(((end.x-start.x)**2)+((end.y-start.y)**2)))
         left(1)
