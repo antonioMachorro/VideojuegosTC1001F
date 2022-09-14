@@ -122,8 +122,9 @@ def move():
                 vector(0, -10),
             ]
             plan = choice(options)
-            course.x = plan.x
-            course.y = plan.y
+            if valid(plan + point):
+                course.x = plan.x
+                course.y = plan.y
 
         up()
         goto(point.x + 10, point.y + 10)
