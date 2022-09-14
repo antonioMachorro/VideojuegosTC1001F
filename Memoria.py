@@ -49,11 +49,17 @@ def draw():
     goto(0, 0)
     shape(car)
     stamp()
-
+    restantes = 0
+    
     for count in range(64):
         if hide[count]:
             x, y = xy(count)
             square(x, y)
+            restantes = restantes + 1
+
+    if restantes ==  0:
+        print('Se ha descubierto toda la imagen.')
+        return
 
     mark = state['mark']
 
