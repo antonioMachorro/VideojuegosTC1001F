@@ -55,7 +55,7 @@ def rectangle(start, end):
     for count in range(2):
         forward(end.x - start.x)
         left(90)
-        forward((end.x - start.x)*2)
+        forward((end.x - start.x)*2) #Draws the height of the rectangle as double of its width
         left(90)
 
     end_fill()
@@ -67,13 +67,13 @@ def triangle(start, end):
     down()
     begin_fill()
     
-    for count in range(2):
+    for count in range(2): #Draws the first line and the second one of the triangle
         forward(end.x - start.x)
-        left(120)
+        left(120) #Turns 120 degrees for the second line
 
 
     end_fill()
-    left(120)
+    left(120) #Resets the cursor to the default position
 
 def tap(x, y):
     "Store starting point or draw shape."
