@@ -8,6 +8,11 @@ state = {'mark': None}
 hide = [True] * 64
 clicks = 0
 
+colors=['cornflower blue','blue','navy','light blue','powder blue','steel blue','cyan',
+'dark turquoise','teal','aquamarine','medium sea green','pale green','lime green','green',
+'green yellow','yellow green','dark khaki','yellow','peru','orange','firebrick','maroon','coral',
+'red','salmon','indian red','deep pink','deep pink','medium violet red','magenta','dark violet', 'medium slate blue']
+
 def square(x, y):
     "Draw white square with black outline at (x, y)."
     up()
@@ -69,10 +74,10 @@ def draw():
         if tiles[mark] < 10:
             goto(x + 15, y)
         else:
-            goto(x + 4, y)
-        color('black')
+            goto(x + 4, y) 
+        color(colors[tiles[mark]])    
         write(tiles[mark], font=('Arial', 30, 'normal'))
-
+    
     update()
     ontimer(draw, 100)
 
