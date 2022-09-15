@@ -8,6 +8,7 @@ state = {'mark': None}
 hide = [True] * 64
 clicks = 0
 
+# Array of 32 colors for each number
 colors=['cornflower blue','blue','navy','light blue','powder blue','steel blue','cyan',
 'dark turquoise','teal','aquamarine','medium sea green','pale green','lime green','green',
 'green yellow','yellow green','dark khaki','yellow','peru','orange','firebrick','maroon','coral',
@@ -75,11 +76,11 @@ def draw():
     if mark is not None and hide[mark]:
         x, y = xy(mark)
         up()
-        if tiles[mark] < 10:
+        if tiles[mark] < 10: # Centers the number if its one digit
             goto(x + 15, y)
         else:
             goto(x + 4, y) 
-        color(colors[tiles[mark]])    
+        color(colors[tiles[mark]]) # Uses the colors of the list for each number
         write(tiles[mark], font=('Arial', 30, 'normal'))
     
     update()

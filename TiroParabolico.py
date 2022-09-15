@@ -57,7 +57,7 @@ def move():
 
     for target in targets:
         if not inside(target):
-            target.x=200 #Raises the speed of the targets to 200
+            target.x=200 #Returns the target to the start if it reaches the limit
 
     ontimer(move, 50)
 

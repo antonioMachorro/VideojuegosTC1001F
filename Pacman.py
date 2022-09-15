@@ -8,12 +8,12 @@ writer = Turtle(visible=False)
 aim = vector(5, 0)
 pacman = vector(-40, -80)
 ghosts = [
-    [vector(-180, 160), vector(10, 0)],
+    [vector(-180, 160), vector(10, 0)], # Changed vector from 5 to 10 to make ghosts faster
     [vector(-180, -160), vector(0, 10)],
     [vector(100, 160), vector(0, -10)],
     [vector(100, -160), vector(-10, 0)],
 ]
-tiles = [
+tiles = [ # Changed map tiles
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0,
     0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0,
@@ -116,7 +116,7 @@ def move():
             point.move(course)
         else:
             options = [
-                vector(10, 0),
+                vector(10, 0), # Changed to compensate for ghosts speed
                 vector(-10, 0),
                 vector(0, 10),
                 vector(0, -10),

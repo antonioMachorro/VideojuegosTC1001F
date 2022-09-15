@@ -12,7 +12,7 @@ En primer lugar, se programó la capacidad de que el programa dibuje un círculo
 y un triangulo al cambiar los ángulos de la forma
 
 
--Juego de la víbora
+- Juego de la víbora
 
 Se hicieron dos cambios principales a este programa.
 El primero fue que la comida se pudiera mover aleatoriamente. Se programó de una manera en que la comida se mueva diez puntos en 
@@ -20,7 +20,7 @@ la pantalla, cuidando que no se salga de ésta. Si es que la comida se saldría 
 eso, el juego cambia los colores de la comida y de la serpiente entre 5 colores diferentes.
 
 
--Juego del Pacman
+- Juego del Pacman
 
 Lo primero que se cambió de este programa fue el comportamiento de los fantasmas para que éstos fueran más inteligentes. Para lograr
 esto, se hizo un método que, si es que un fantasma choca con una pared, entonces éste se tendrá que mover en cualquier otra dirección
@@ -28,7 +28,7 @@ en donde no haya una pared. Es decir, este método logra que un fantasma no se m
 original y la velocidad de los fantasmas para que avanzaran más rápido.
 
 
--Juego del tiro parabólico
+- Juego del tiro parabólico
 
 Se cambió el código de este programa para que el juego tenga dos funcionalidades diferentes.
 En primer lugar, se cambió la velocidad del proyectil que lanza el jugador, así como la velocidad con la que se mueven los balones
@@ -37,7 +37,7 @@ demasiado rápido para el jugador. Después, se altero el código para que exist
 de inicio si se sobrepasa el límite de la pantalla
 
 
--Juego de memoria
+- Juego de memoria
 
 El primer cambio que se le hizo a este videojuego fue la creación de un contador de taps. Se creó un método que despliege el 
 número de veces que el jugador a clickeado alguno de los recuadros del juego cada vez que éste seleccione uno de éstos.
