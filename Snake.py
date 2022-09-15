@@ -55,10 +55,15 @@ def move():
     for body in snake:
         square(body.x, body.y, 9, color_snake)
 
-    direccion = randrange(1,5)
-    if(direccion == 1 and food.x+10 < 190):
-        food.x = food.x + 10
-        square(food.x, food.y, 9, color_food)
+    direccion = randrange(1,5) #A random number between 1 and 4 is selected/
+    #to determine the direction in which the food will move.
+    #1-right  2-left  3-up  4-down
+    if(direccion == 1 and food.x+10 < 190): #Checks the random number, as well/
+        #as whether the food will remain inside the screen or not
+        food.x = food.x + 10 #Moves the food's coordinates ten points to the/
+        #right
+        square(food.x, food.y, 9, color_food) #The food moves to the position/
+        #obtained in the previous lines
     elif(direccion == 2 and food.x-10 > -200):
         food.x = food.x - 10
         square(food.x, food.y, 9, color_food)
@@ -69,7 +74,8 @@ def move():
         food.y = food.y - 10
         square(food.x, food.y, 9, color_food)
     else:
-        square(food.x, food.y, 9, color_food)
+        square(food.x, food.y, 9, color_food) #If it were to go outside the/
+        #scree, the food remains in its current position
     update()
     ontimer(move, 100)
 

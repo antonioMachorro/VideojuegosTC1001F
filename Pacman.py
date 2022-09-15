@@ -121,10 +121,14 @@ def move():
                 vector(0, 10),
                 vector(0, -10),
             ]
-            plan = choice(options)
-            if valid(plan + point):
+            plan = choice(options) #Checks whether the planned movement is/
+            #valid or not
+            if valid(plan + point): #The ghost will only move if the movement/
+                #is valid. Otherwise, it will choose another direction
                 course.x = plan.x
                 course.y = plan.y
+            else:
+                continue; #Tries to choose a different direction
 
         up()
         goto(point.x + 10, point.y + 10)

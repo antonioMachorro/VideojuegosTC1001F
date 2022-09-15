@@ -25,18 +25,24 @@ def square(start, end):
 def circle(start, end):
     "Draw circle from start to end."
     up()
-    goto(start.x, start.y)
+    goto(start.x, start.y) #The pointer starts on the first point that the/
+    #player clicks on
     begin_fill()
 
-    goto(end.x, end.y)
-    left(90)
+    goto(end.x, end.y) #The pointer goes to the second point the player/
+    #clicks on to simulate the circle's radius
+    left(90) #The cursor faces 90 degrees to the left in order to start the/
+    #circunference
 
     down()
-    for count in range(360):
-        forward(0.017*sqrt(((end.x-start.x)**2)+((end.y-start.y)**2)))
-        left(1)
+    for count in range(360): #The method starts counting the degrees, going/
+        #from 0 to 360 in order to draw the circle
+        forward(0.017*sqrt(((end.x-start.x)**2)+((end.y-start.y)**2))) #The/
+        #cursor moves forward the length of the radius times 1 degree in/
+        #radians, following the formula for calculating the arc length.
+        left(1) #The cursor moves one degree to the left
 
-    right(90)
+    right(90) #The cursor resets it's initial orientation
     end_fill()
 
 def rectangle(start, end):
@@ -95,7 +101,8 @@ onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
-onkey(lambda: color('orange'), 'O')
+onkey(lambda: color('orange'), 'O') #The color added to the game is orange/
+#which can be accessed by the player by typing 'O' on the keyboard.
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')

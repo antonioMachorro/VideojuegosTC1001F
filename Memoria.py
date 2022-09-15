@@ -34,15 +34,16 @@ def xy(count):
     return (count % 8) * 50 - 200, (count // 8) * 50 - 200
 
 def tap(x, y):
-    global clicks
+    global clicks #Declares the previously established variable clicks as a/
+    #global variable in order to use it in this method
     "Update mark and hidden tiles based on tap."
     spot = index(x, y)
     mark = state['mark']
 
     if mark is None or mark == spot or tiles[mark] != tiles[spot]:
         state['mark'] = spot
-        clicks = clicks + 1
-        print('Taps:', clicks)
+        clicks = clicks + 1 #Adds 1 to the global amount of clicks per tap
+        print('Taps:', clicks) #Prints the number of clicks on-screen
     else:
         hide[spot] = False
         hide[mark] = False
@@ -54,17 +55,20 @@ def draw():
     goto(0, 0)
     shape(car)
     stamp()
-    restantes = 0
+    restantes = 0 #Creates a variable that counts how many remaining squares/
+    #are unsolved on the board
     
     for count in range(64):
         if hide[count]:
             x, y = xy(count)
             square(x, y)
-            restantes = restantes + 1
+            restantes = restantes + 1 #Adds a remaining unsolved square per/
+            #hidden squares in the array
 
-    if restantes ==  0:
-        print('Se ha descubierto toda la imagen.')
-        return
+    if restantes ==  0: #Checks if there are no remaining unsolved squares
+        print('Se ha descubierto toda la imagen.') #Prints a message once all/
+        #squares have been solved
+        return 
 
     mark = state['mark']
 

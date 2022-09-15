@@ -11,8 +11,8 @@ def tap(x, y):
     if not inside(ball):
         ball.x = -199
         ball.y = -199
-        speed.x = (x + 500) / 25
-        speed.y = (y + 500) / 25
+        speed.x = (x + 500) / 25 #Raises the speed to 500 on the x axis
+        speed.y = (y + 500) / 25 #Raises the speed to 500 on the y axis
 
 def inside(xy):
     "Return True if xy within screen."
@@ -57,7 +57,7 @@ def move():
 
     for target in targets:
         if not inside(target):
-            target.x=200
+            target.x=200 #Raises the speed of the targets to 200
 
     ontimer(move, 50)
 
